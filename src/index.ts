@@ -118,3 +118,17 @@ class BAP578Service {
     await this.listener.stop();
     process.exit(0);
   }
+}
+
+// Main
+const service = new BAP578Service();
+
+// Handle graceful shutdown
+process.on('SIGINT', () => service.stop());
+process.on('SIGTERM', () => service.stop());
+
+// Start
+service.start().catch((error) => {
+  logger.error({ error }, 'Failed to start service');
+  process.exit(1);
+});

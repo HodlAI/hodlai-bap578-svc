@@ -78,14 +78,16 @@ export class AIProvider {
           model 
         }, 'AI provider error');
 
-        if (status === 429) {
-          throw new Error('RATE_LIMIT_EXCEEDED');
-        }
-        if (status === 401 || status === 403) {
-          throw new Error('AUTH_FAILED');
-        }
-        if (status >= 500) {
-          throw new Error('PROVIDER_ERROR');
+        if (status !== undefined) {
+          if (status === 429) {
+            throw new Error('RATE_LIMIT_EXCEEDED');
+          }
+          if (status === 401 || status === 403) {
+            throw new Error('AUTH_FAILED');
+          }
+          if (status >= 500) {
+            throw new Error('PROVIDER_ERROR');
+          }
         }
       }
       
