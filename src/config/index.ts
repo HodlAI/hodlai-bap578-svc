@@ -10,7 +10,7 @@ export const config = {
   // Contract Addresses
   contracts: {
     hodlaiToken: process.env.HODLAI_TOKEN || '0x987e6269c6b7ea6898221882f11ea16f87b97777',
-    hodlaiLogic: process.env.HODLAI_LOGIC || '', // Fill after deployment
+    hodlaiLogic: process.env.HODLAI_LOGIC || '0x6068279Cc74Fb170794012ED73363De6De818294', // Deployed 2026-02-12
   },
   
   // Gas Wallet (for callbacks)

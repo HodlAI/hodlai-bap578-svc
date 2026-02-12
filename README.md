@@ -19,6 +19,12 @@ This service listens for `AgentComputeRequest` events from BAP-578 agents via th
                        └──────────────┘           └──────────────┘
 ```
 
+## Deployment
+
+**Contract Addresses (BNB Chain Mainnet):**
+- **HodlAILogic**: `0x6068279Cc74Fb170794012ED73363De6De818294`
+- **HODLAI Token**: `0x987e6269c6b7ea6898221882f11ea16f87b97777`
+
 ## Quick Start
 
 ### 1. Install Dependencies
